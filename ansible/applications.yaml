@@ -1,0 +1,13 @@
+-
+  name: Play 1
+  hosts: localhost
+  become: yes
+
+  tasks:
+    - name: execute a command 'date'
+      command: date
+
+    - name: install package
+      apt: 
+        name: vim 
+        state: latest
