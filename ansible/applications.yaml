@@ -1,24 +1,63 @@
 -
-  name: Play 1
+  name: Ubuntu bootstrap
   hosts: localhost
   become: yes
 
   tasks:
-    - name: execute a command 'date'
-      command: date
+    - name: Update repositories cache
+      apt:
+        update_cache: yes
 
-    - name: install package
-      apt: 
-        name: vim 
-        state: latest
+    - name: Install a list of packages
+      apt:
+        name: "{{ packages }}"
+      vars:
+        packages:
+        - ansible
+        - awscli
+        - cbm # colour bandwidth monitor
+        - curl
+        - cifs-utils
+        - git-crypt
+        - iftop # the top of network usage
+        - iperf3 # network performance tests
+        - ipscan
+        - jq
+        - make
+        - netcat
+        - nethogs
+        - nmap
+        - ruby
+        - shellcheck
+        - snap
+        - software-properties-common
+        - speedtest-cli
+        - steam-installer
+        - ssh
+        - tcpdump
+        - telnet
+        - terminator
+        - vim
+        - vlc
+        - tmux
 
-    - name: install basic package
-        action: >
-          {{ ansible_pkg_mgr }} name=vim state=present update_cache=yes
+    - name: Install snaps
+      snap:
+        name:
+          - docker
+          - fast # speedtester
+          - kops
+          - spotify
 
-        #    - name: install basic packages
-        # action: >
-        #  {{ ansible_pkg_mgr }} name={{ item }} state=latest update_cache=yes
-        # with_items:
-        # - vim
-        # - tmux
+    - name: Install snaps with option --classic
+      snap:
+        name:
+          - code
+          - helm
+          - rubymine
+          - slack
+        classic: yes
+    
+    - name: Remove dependencies that are no longer required
+      apt:
+        autoremove: yes
