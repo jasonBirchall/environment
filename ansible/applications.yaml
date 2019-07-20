@@ -11,3 +11,14 @@
       apt: 
         name: vim 
         state: latest
+
+    - name: install basic package
+        action: >
+          {{ ansible_pkg_mgr }} name=vim state=present update_cache=yes
+
+        #    - name: install basic packages
+        # action: >
+        #  {{ ansible_pkg_mgr }} name={{ item }} state=latest update_cache=yes
+        # with_items:
+        # - vim
+        # - tmux
