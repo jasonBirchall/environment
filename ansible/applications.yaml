@@ -18,6 +18,7 @@
         - cbm # colour bandwidth monitor
         - curl
         - cifs-utils
+        - git
         - git-crypt
         - iftop # the top of network usage
         - iperf3 # network performance tests
@@ -48,12 +49,14 @@
           - fast # speedtester
           - kops
           - spotify
+          - terraform-snap
 
     - name: Install snaps with option --classic
       snap:
         name:
           - code
           - helm
+          - kubectl
           - rubymine
           - slack
         classic: yes
