@@ -14,6 +14,7 @@
       vars:
         packages:
         - ansible
+        - apt-transport-https
         - awscli
         - cbm # colour bandwidth monitor
         - curl
@@ -28,7 +29,7 @@
         - netcat
         - nethogs
         - nmap
-        - ruby
+        - openvpn
         - shellcheck
         - snap
         - software-properties-common
@@ -57,6 +58,7 @@
           - code
           - helm
           - kubectl
+          - ruby
           - rubymine
           - slack
         classic: yes
