@@ -1,0 +1,16 @@
+-
+  name: Create directory structure
+  hosts: localhost
+  become: yes
+
+  tasks:
+    - name: Create a workarea if it does not exist
+      file:
+        path: /home/json/Documents/workarea
+        state: directory
+        mode: '0755'
+    - name: Create a tmp if it does not exist
+      file:
+        path: /home/json/Documents/tmp
+        state: directory
+        mode: '0755'
