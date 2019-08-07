@@ -14,8 +14,8 @@
       vars:
         packages:
         - ansible
-        - apache2-utils
-        - apt-transport-https
+        - apache2-utils # tools like htpassword etc
+        - apt-transport-https # helpful to have
         - awscli
         - cbm # colour bandwidth monitor
         - curl
