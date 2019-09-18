@@ -31,6 +31,7 @@
         - nethogs
         - nmap
         - openvpn
+        - ranger
         - ruby-all-dev
         - shellcheck
         - snap
