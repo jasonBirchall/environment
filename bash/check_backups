@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# This script will purge older versions of the Standard notes 
+# in a Google Drive
+
+# Get the date
+date="${date}"
+
+# Location of backups
+backupdir="${HOME}/Dropbox/backups"
+
+# Arguments for backup age
+age=$1
+
+# Check if relevant file exists
+if [[ ! -d $backupdir ]]; then
+    echo "ERROR: Backup volume has not been mapped"
+    exit 1
+fi
+
+# Check if arguments have been supplied
+if [[ "$#" -eq 0 ]]; then
+    echo "ERROR: No arguments supplied"
+    exit 1
+fi
+
+# Find all files over n days old and delete
+find "$backupdir" -maxdepth 2 -type f -mtime +"$age" -ls -exec rm {} \;

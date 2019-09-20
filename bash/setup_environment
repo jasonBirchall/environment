@@ -1,0 +1,65 @@
+#!/bin/bash
+
+# Script to setup an environment for work and home
+
+# Application versions
+GOLAND="1.12"
+HELM_VERSION=2.11.0
+KOPS_VERSION=1.10.1
+KUBECTL_VERSION=1.11.10
+TERRAFORM="0.11.14"
+
+
+# Mount appropriate drives
+#google-drive-ocamlfuse ~/Documents/google_drive
+
+# Add repositories
+#sudo apt-add-repository -y ppa:rael-gc/rvm
+
+# Install useful tools
+sudo apt update
+sudo snap install docker
+sudo snap install vscode  --classic
+sudo snap install kubectl --classic
+sudo snap install helm    --classic
+
+sudo apt install vim \
+                 unzip \
+                 bash-completion \
+                 go-dep \
+                 awscli \
+                 powertop \
+                 iotop \
+                 smartmontools \
+                 neofetch \
+                 iftop \
+                 wavemon \
+                 hardinfo \
+                 rvm
+
+# Install Terraform
+if [[ -f /usr/local/bin/terraform ]]; then
+  echo \n "`terraform version` already installed at `which terraform`"
+else
+  echo \n "Installing Terraform"
+  wget https://releases.hashicorp.com/terraform/${terraform}/terraform_${terraform}_linux_amd64.zip > /tmp/terraform.zip \
+    && unzip /tmp/terraform.zip \
+    && sudo mv /tmp/terraform /usr/local/bin/ \
+    && rm /tmp/terraform.zip
+fi
+
+# Install Golang https://github.com/canha/golang-tools-install-script/blob/master/goinstall.sh
+go_file="go${golang}.linux-amd64.tar.gz"
+
+if [ -d "$HOME/go" ]; then
+  echo "Go already installed at `which go`" > 1>&2 
+else
+  echo ""
+fi
+
+# install terraform plugins i.e. pingdom, pagerduty
+
+# Record system setting
+#sudo tlp-stat > /tmp/battery
+#neofetch > /tmp/sysinfo
+#hardinfo -r > /tmp/hardinfo

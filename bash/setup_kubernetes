@@ -1,0 +1,16 @@
+#!/bin/bash -x
+
+# Set environment
+read -p "Enter kops state bucket name:" kops
+
+export KOPS_STATE_STORE=$kops
+
+# This script will install all the required tools and setup to operate a Kubernetes cluster
+sudo apt update
+sudo apt install -y awscli
+sudo snap install kubectl --classic
+sudo snap install helm --classic
+curl -LO https://github.com/kubernetes/kops/releases/download/1.12.2/kops-linux-amd64
+chmod +x kops-linux-amd64
+sudo mv ./kops-linux-amd64 /usr/local/bin/kops
+
