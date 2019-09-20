@@ -1,7 +1,7 @@
-# environment
-Collection of Ansible and bash scripts to setup environments.
+# Environment repository
+Collection of Ansible, Bash and Ruby scripts to setup environments on my personal workstation.
 
-## install ansible using ansible repository
+## Install ansible using ansible repository
 To setup your environment you'll need to install ansible and run playbooks.
 
 - Install ansible: 
