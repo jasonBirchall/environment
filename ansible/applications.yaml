@@ -17,6 +17,7 @@
         - apache2-utils # tools like htpassword etc
         - apt-transport-https # helpful to have
         - awscli
+        - bash-completion
         - cbm # colour bandwidth monitor
         - curl
         - cifs-utils
@@ -25,15 +26,18 @@
         - iftop # the top of network usage
         - iperf3 # network performance tests
         - ipscan
+        - iotop
         - jq
         - make
         - netcat
         - nethogs
+        - neofetch # Gives you a prompt for screenshot
         - nmap
         - openvpn
         - ranger
         - ruby-all-dev
         - shellcheck
+        - smartmontools
         - snap
         - software-properties-common
         - speedtest-cli
@@ -46,6 +50,7 @@
         - vim
         - vim-gnome
         - vlc
+        - wavemon # network interface statistics
         - xclip # install to copy out of tmux
 
     - name: Install snaps
