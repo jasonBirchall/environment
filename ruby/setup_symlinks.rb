@@ -22,7 +22,7 @@ end
 
 symlink(DOTFILES, "bashrc", "~/.bashrc")
 symlink(DOTFILES, "bash_profile", "~/.bash_profile")
-symlink(DOTFILES, "bash_completions", "~/.completions")
+symlink(DOTFILES, "bash_completions/*", "~/.completions/")
 symlink(DOTFILES, "git/gitconfig", "~/.gitconfig")
 symlink(DOTFILES, "ranger", "~/.config/ranger")
 symlink(DOTFILES, "terminator/config", "~/.config/terminator/config")
