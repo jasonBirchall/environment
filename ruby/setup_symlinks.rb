@@ -20,14 +20,17 @@ def create_symlink(dir, source, destination)
   puts "created symlink #{destination}" 
 end
 
+# Files
 symlink(DOTFILES, "bashrc", "~/.bashrc")
 symlink(DOTFILES, "bash_profile", "~/.bash_profile")
-symlink(DOTFILES, "bash_completions/*", "~/.completions/")
 symlink(DOTFILES, "git/gitconfig", "~/.gitconfig")
-symlink(DOTFILES, "ranger", "~/.config/ranger")
-symlink(DOTFILES, "terminator/config", "~/.config/terminator/config")
+symlink(DOTFILES, "ranger", "~/.config/")
 symlink(DOTFILES, "tmux", "~/.tmux.conf")
 symlink(DOTFILES, "vimrc", "~/.vimrc")
+
+# Directories
+symlink(DOTFILES, "bash_completions/*", "~/.completions/")
+symlink(DOTFILES, "terminator/config", "~/.config/terminator/config")
 symlink(DOTFILES, "vim/plugins", "~/.vim/pack/")
 symlink(DOTFILES, "vim/colors", "~/.vim/")
 
