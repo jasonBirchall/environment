@@ -16,3 +16,8 @@ $ sudo apt install ansible
 ```
 $ sudo ln -s ~/Documents/workarea/environment/ansible/hosts /etc/ansible/hosts
 ```
+
+## Using Ansible to install applications
+```
+sudo ansible-playbook ansible/applications.yaml
+```
