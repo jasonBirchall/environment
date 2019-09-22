@@ -27,6 +27,8 @@ symlink(DOTFILES, "git/gitconfig", "~/.gitconfig")
 symlink(DOTFILES, "ranger", "~/.config/")
 symlink(DOTFILES, "tmux", "~/.tmux.conf")
 symlink(DOTFILES, "vimrc", "~/.vimrc")
+symlink(DOTFILES, "i3/xinitrc", "~/.xinitrc")
+symlink(DOTFILES, "i3/config", "~/.i3/config")
 
 # Directories
 symlink(DOTFILES, "bash_completions/*", "~/.completions/")

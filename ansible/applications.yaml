@@ -21,19 +21,24 @@
         - cbm # colour bandwidth monitor
         - curl
         - cifs-utils
+        - feh
         - git
         - git-crypt
+        - i3 # window manager
+        - i3lock # lock for i3
         - iftop # the top of network usage
         - iperf3 # network performance tests
         - ipscan
         - iotop
         - jq
+        - lxappearance
         - make
         - netcat
         - nethogs
         - neofetch # Gives you a prompt for screenshot
         - nmap
         - openvpn
+        - pavucontrol
         - ranger
         - ruby-all-dev
         - shellcheck
@@ -52,6 +57,7 @@
         - vlc
         - wavemon # network interface statistics
         - xclip # install to copy out of tmux
+        - xinit # allows a user to manually start an xorg display server
 
     - name: Install snaps
       snap:
