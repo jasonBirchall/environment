@@ -67,6 +67,7 @@
         name:
           - code
           - helm
+          - hub
           - kubectl
           - ruby
           - rubymine
