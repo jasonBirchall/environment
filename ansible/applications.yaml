@@ -13,6 +13,7 @@
         name: "{{ packages }}"
       vars:
         packages:
+        - ack-grep
         - ansible
         - apache2-utils # tools like htpassword etc
         - apt-transport-https # helpful to have
