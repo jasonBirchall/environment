@@ -29,6 +29,7 @@ symlink(DOTFILES, "tmux", "~/.tmux.conf")
 symlink(DOTFILES, "vimrc", "~/.vimrc")
 symlink(DOTFILES, "i3/xinitrc", "~/.xinitrc")
 symlink(DOTFILES, "i3/config", "~/.i3/config")
+symlink(DOTFILES, "i3/i3status.conf", "~/.i3/i3status.conf")
 
 # Directories
 symlink(DOTFILES, "bash_completions/*", "~/.completions/")
