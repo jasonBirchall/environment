@@ -19,6 +19,7 @@
         - apt-transport-https # helpful to have
         - awscli
         - bash-completion
+        - caffeine
         - cbm # colour bandwidth monitor
         - curl
         - cifs-utils
@@ -38,6 +39,7 @@
         - nethogs
         - neofetch # Gives you a prompt for screenshot
         - nmap
+        - nodejs
         - openvpn
         - pavucontrol
         - ranger
@@ -55,10 +57,12 @@
         - tmux
         - vim
         - vim-gnome
+        - virtualbox
         - vlc
         - wavemon # network interface statistics
         - xclip # install to copy out of tmux
         - xinit # allows a user to manually start an xorg display server
+        - yarn
 
     - name: Install snaps
       snap:
