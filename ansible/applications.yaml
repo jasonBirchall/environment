@@ -67,6 +67,8 @@
     - name: Install snaps
       snap:
         name:
+          - core
+          - core18
           - docker
           - fast # speedtester
           - kops
@@ -77,12 +79,14 @@
       snap:
         name:
           - code
+          - go
           - helm
           - hub
           - kubectl
           - ruby
           - rubymine
           - slack
+          - terraform-snap
         classic: yes
     
     - name: Remove dependencies that are no longer required
