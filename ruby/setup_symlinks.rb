@@ -30,6 +30,8 @@ symlink(DOTFILES, "vimrc", "~/.vimrc")
 symlink(DOTFILES, "i3/xinitrc", "~/.xinitrc")
 symlink(DOTFILES, "i3/config", "~/.i3/config")
 symlink(DOTFILES, "i3/i3status.conf", "~/.i3/i3status.conf")
+symlink(DOTFILES, "vscode/keybindings.json", "~/.config/Code/User/keybindings.json")
+symlink(DOTFILES, "vscode/settings.json", "~/.config/Code/User/settings.json")
 
 # Directories
 symlink(DOTFILES, "bash_completions/*", "~/.completions/")
