@@ -35,6 +35,7 @@
         - jq
         - lxappearance
         - make
+        - mutt
         - netcat
         - nethogs
         - neofetch # Gives you a prompt for screenshot
@@ -72,7 +73,6 @@
           - docker
           - fast # speedtester
           - kops
-          - mutt
           - spotify
           - terraform-snap
 
