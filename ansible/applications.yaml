@@ -79,6 +79,7 @@
     - name: Install snaps with option --classic
       snap:
         name:
+          - ab
           - code
           - go
           - helm
