@@ -73,6 +73,7 @@
           - docker
           - fast # speedtester
           - kops
+          - ncspot
           - spotify
           - terraform-snap
 
