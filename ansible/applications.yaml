@@ -71,6 +71,7 @@
           - core
           - core18
           - docker
+          - electronplayer # netflix player
           - fast # speedtester
           - kops
           - ncspot

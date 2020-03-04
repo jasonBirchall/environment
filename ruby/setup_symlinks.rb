@@ -39,6 +39,7 @@ symlink(DOTFILES, "bash_completions/*", "~/.completions/")
 symlink(DOTFILES, "terminator/config", "~/.config/terminator/config")
 symlink(DOTFILES, "vim/plugins", "~/.vim/pack/")
 symlink(DOTFILES, "vim/colors", "~/.vim/")
+symlink(DOTFILES, "tmux-dir/plugins", "~/.tmux/")
 
 symlink(ENVIRONMENT, "bash/*", "~/bin")
 symlink(ENVIRONMENT, "ruby/*", "~/bin")
