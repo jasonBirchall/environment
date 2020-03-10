@@ -26,6 +26,7 @@
         - feh
         - git
         - git-crypt
+        - go-dep # go dependency manager
         - i3 # window manager
         - i3lock # lock for i3
         - iftop # the top of network usage
