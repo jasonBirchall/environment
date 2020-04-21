@@ -33,6 +33,7 @@ symlink(DOTFILES, "i3/i3status.conf", "~/.i3/i3status.conf")
 symlink(DOTFILES, "vscode/keybindings.json", "~/.config/Code/User/keybindings.json")
 symlink(DOTFILES, "vscode/settings.json", "~/.config/Code/User/settings.json")
 symlink(DOTFILES, "apt/sources.list", "/etc/apt/sources.list")
+symlink(DOTFILES, "ncspot/config.toml", "/home/json/snap/ncspot/17/.config/ncspot/config.toml")
 
 # Directories
 symlink(DOTFILES, "bash_completions/*", "~/.completions/")
