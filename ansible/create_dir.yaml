@@ -14,3 +14,18 @@
         path: /home/json/Documents/tmp
         state: directory
         mode: '0755'
+    - name: Create a bash completions dir if it does not exist
+      file:
+        path: /home/json/.completions
+        state: directory
+        mode: '0755'
+    - name: Create a terminator config dir if it does not exist
+      file:
+        path: /home/json/.config/terminator/config
+        state: directory
+        mode: '0755'
+    - name: Create a vim config dir if it does not exist
+      file:
+        path: /home/json/.vim/pack
+        state: directory
+        mode: '0755'
