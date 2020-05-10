@@ -23,6 +23,7 @@
         - cbm # colour bandwidth monitor
         - curl
         - cifs-utils
+        - discord
         - feh
         - git
         - git-crypt
