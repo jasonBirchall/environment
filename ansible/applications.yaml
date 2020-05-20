@@ -31,7 +31,6 @@
         - go-dep # go dependency manager
         - i3 # window manager
         - i3lock # lock for i3
-        - intellij-idea-community
         - iftop # the top of network usage
         - iperf3 # network performance tests
         - ipscan
@@ -77,10 +76,10 @@
           - docker
           - electronplayer # netflix player
           - fast # speedtester
-          - kops
+          - gotop # CPU, MEM, Net monitoring tool
+          - intellij-idea-community
           - ncspot
           - spotify
-          - terraform-snap
 
     - name: Install snaps with option --classic
       snap:
