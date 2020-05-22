@@ -17,6 +17,7 @@
         - ansible
         - apache2-utils # tools like htpassword etc
         - apt-transport-https # helpful to have
+        - audacity
         - awscli
         - bash-completion
         - caffeine
