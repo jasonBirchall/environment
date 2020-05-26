@@ -24,7 +24,6 @@
         - cbm # colour bandwidth monitor
         - curl
         - cifs-utils
-        - discord
         - feh
         - fortune # fortune at the top of your terminal
         - git
@@ -34,7 +33,6 @@
         - i3lock # lock for i3
         - iftop # the top of network usage
         - iperf3 # network performance tests
-        - ipscan
         - iotop
         - jq
         - lxappearance
@@ -74,6 +72,7 @@
         name:
           - core
           - core18
+          - discord
           - docker
           - electronplayer # netflix player
           - fast # speedtester
