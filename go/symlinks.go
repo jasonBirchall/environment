@@ -9,34 +9,32 @@ import (
 	"io"
 	"log"
 	"os"
+
+	"github.com/joho/godotenv"
 )
 
-func main() {
-	IsEnvReady()
-	PopulateMap()
-}
-
-func IsEnvReady() {
-	CheckIfEnvSet("ENVIRONMENT")
-	CheckIfEnvSet("DOTFILES")
-}
-
-func CheckIfEnvSet(key string) bool {
-	value, exists := os.LookupEnv(key)
-	if !exists {
-		panic(key + " variable does not exist")
-	} else if _, err := os.Stat(value); os.IsNotExist(err) {
-		panic(value + " does not exist")
+// init is invoked before main()
+func init() {
+	// loads values from .env into the system
+	if err := godotenv.Load(); err != nil {
+		panic("No .env file found")
 	}
-	return true
 }
 
-func PopulateMap() {
-	dotfiles, exists := os.LookupEnv("DOTFILES")
+func main() {
+	dotfiles := CheckIfEnvSet("DOTFILES")
+	SymlinkFiles(dotfiles)
+}
+
+func CheckIfEnvSet(envvar string) string {
+	envvar, exists := os.LookupEnv(envvar)
 	if !exists {
 		panic("Requried variable does not exist")
 	}
+	return envvar
+}
 
+func SymlinkFiles(envvar string) {
 	csvFile, _ := os.Open("files.csv")
 	reader := csv.NewReader(bufio.NewReader(csvFile))
 
@@ -49,15 +47,11 @@ func PopulateMap() {
 			log.Fatal(err)
 		}
 
-		// CreateSymlink(dotfiles, line[0], line[1])
+		CreateSymlink(envvar, line[0], line[1])
 
-		fmt.Println(dotfiles, line[0], line[1])
 	}
 }
 
-// func CreateSymlink(dir, source, target string) {
-// 	name := dir, source
-// 	println(dir)
-// 	println(source)
-// 	println(target)
-// }
+func CreateSymlink(dir, source, target string) {
+	fmt.Println(dir, source, target)
+}
