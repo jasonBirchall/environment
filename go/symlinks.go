@@ -29,7 +29,9 @@ func main() {
 func CheckIfEnvSet(envvar string) string {
 	envvar, exists := os.LookupEnv(envvar)
 	if !exists {
-		panic("Requried variable does not exist")
+		panic(envvar + "Requried variable does not exist")
+	} else if _, err := os.Stat(envvar); os.IsNotExist(err) {
+		panic(envvar + " directory does not exist")
 	}
 	return envvar
 }
