@@ -1,11 +1,9 @@
-//TODO: sort out the existance checks
 //FIXME: Find out why the createSymlink isn't working
 package main
 
 import (
 	"bufio"
 	"encoding/csv"
-	"fmt"
 	"io"
 	"log"
 	"os"
@@ -23,21 +21,24 @@ func init() {
 
 func main() {
 	dotfiles := CheckIfEnvSet("DOTFILES")
-	SymlinkFiles(dotfiles)
+	// environment := CheckIfEnvSet("ENVIRONMENT")
+
+	PopulateSymlink("files.csv", dotfiles)
+	// PopulateSymlink("dir.csv", environment)
 }
 
 func CheckIfEnvSet(envvar string) string {
 	envvar, exists := os.LookupEnv(envvar)
 	if !exists {
-		panic(envvar + "Requried variable does not exist")
+		panic(envvar + " requried variable does not exist")
 	} else if _, err := os.Stat(envvar); os.IsNotExist(err) {
 		panic(envvar + " directory does not exist")
 	}
 	return envvar
 }
 
-func SymlinkFiles(envvar string) {
-	csvFile, _ := os.Open("files.csv")
+func PopulateSymlink(file, envvar string) {
+	csvFile, _ := os.Open(file)
 	reader := csv.NewReader(bufio.NewReader(csvFile))
 
 	for {
@@ -50,10 +51,36 @@ func SymlinkFiles(envvar string) {
 		}
 
 		CreateSymlink(envvar, line[0], line[1])
-
 	}
 }
 
-func CreateSymlink(dir, source, target string) {
-	fmt.Println(dir, source, target)
+func CreateSymlink(dir, target, link string) {
+
+	// source := dir + "/" + target
+
+	os.Symlink("/home/json/Documents/workarea/dotfiles/bashrc", "~/.bashrc")
+
+	// println(source, link)
+	// out, err := exec.Command("ln", "-h").Output()
+
+	// if err != nil {
+	// 	fmt.Printf("%s", err)
+	// }
+
+	// output := string(out[:])
+	// fmt.Println(output)
+
+	// println("Checking: if symlink already exists")
+	// if _, err := os.Lstat(source); err == nil {
+	// 	fmt.Errorf("Skipping: symlink already exists: %+v", err)
+	// }
+	// println("passed")
+
+	// println("Linking: ", source, link)
+	// if err := os.Symlink(link, source); err != nil {
+	// 	fmt.Errorf("Failed: cannot create symlink", err)
+	// } else {
+	// 	fmt.Println("Created: ", link)
+	// }
+	// println("finished")
 }
