@@ -93,7 +93,6 @@
           - ruby
           - rubymine
           - slack
-          - terraform-snap
         classic: yes
     
     - name: Remove dependencies that are no longer required
