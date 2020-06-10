@@ -39,6 +39,7 @@ func CheckIfEnvSet(envvar string) string {
 	return envvar
 }
 
+// CheckIfFileExists checks to see if the csv exists
 func CheckIfFileExists(file string) {
 	if _, err := os.Stat(file); err != nil {
 		panic(file + "doesn't exist")
