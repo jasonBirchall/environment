@@ -1,12 +1,13 @@
-//FIXME: Find out why the createSymlink isn't working
 package main
 
 import (
 	"bufio"
 	"encoding/csv"
+	"fmt"
 	"io"
 	"log"
 	"os"
+	"strings"
 
 	"github.com/joho/godotenv"
 )
@@ -27,6 +28,7 @@ func main() {
 	// PopulateSymlink("dir.csv", environment)
 }
 
+// CheckIfEnvSet checks to see if env var and dir exists
 func CheckIfEnvSet(envvar string) string {
 	envvar, exists := os.LookupEnv(envvar)
 	if !exists {
@@ -37,7 +39,16 @@ func CheckIfEnvSet(envvar string) string {
 	return envvar
 }
 
+func CheckIfFileExists(file string) {
+	if _, err := os.Stat(file); err != nil {
+		panic(file + "doesn't exist")
+	}
+}
+
+// PopulateSymlink uses a .csv file in the same dir to populate symlinks
 func PopulateSymlink(file, envvar string) {
+	CheckIfFileExists(file)
+
 	csvFile, _ := os.Open(file)
 	reader := csv.NewReader(bufio.NewReader(csvFile))
 
@@ -50,37 +61,22 @@ func PopulateSymlink(file, envvar string) {
 			log.Fatal(err)
 		}
 
-		CreateSymlink(envvar, line[0], line[1])
+		target := envvar + "/" + line[0]
+		link := strings.TrimSpace(line[1])
+
+		CreateSymlink(target, link)
 	}
 }
 
-func CreateSymlink(dir, target, link string) {
-
-	// source := dir + "/" + target
-
-	os.Symlink("/home/json/Documents/workarea/dotfiles/bashrc", "~/.bashrc")
-
-	// println(source, link)
-	// out, err := exec.Command("ln", "-h").Output()
-
-	// if err != nil {
-	// 	fmt.Printf("%s", err)
-	// }
-
-	// output := string(out[:])
-	// fmt.Println(output)
-
-	// println("Checking: if symlink already exists")
-	// if _, err := os.Lstat(source); err == nil {
-	// 	fmt.Errorf("Skipping: symlink already exists: %+v", err)
-	// }
-	// println("passed")
-
-	// println("Linking: ", source, link)
-	// if err := os.Symlink(link, source); err != nil {
-	// 	fmt.Errorf("Failed: cannot create symlink", err)
-	// } else {
-	// 	fmt.Println("Created: ", link)
-	// }
-	// println("finished")
+// CreateSymlink creates a new symbolic or "soft" link
+func CreateSymlink(target, link string) {
+	if _, err := os.Lstat(link); err == nil {
+		fmt.Println("Skipping:", link, "already exists")
+	} else {
+		err := os.Symlink(target, link)
+		if err != nil {
+			fmt.Println(err)
+			os.Exit(1)
+		}
+	}
 }
