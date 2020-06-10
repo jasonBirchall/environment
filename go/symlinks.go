@@ -1,3 +1,4 @@
+// TODO: Separate csv files into purpose, e.g. $HOME or $CONFIG, perhaps use env vars.
 package main
 
 import (
