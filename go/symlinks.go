@@ -23,11 +23,11 @@ func init() {
 
 func main() {
 	dotfiles := CheckIfEnvSet("DOTFILES")
-	// environment := CheckIfEnvSet("ENVIRONMENT")
+	environment := CheckIfEnvSet("ENVIRONMENT")
 	home := CheckIfEnvSet("HOME")
 
-	PopulateSymlink("files.csv", home, dotfiles)
-	// PopulateSymlink("dir.csv", environment)
+	PopulateSymlink("dotfiles.csv", home, dotfiles)
+	PopulateSymlink("environment.csv", home, environment)
 }
 
 // CheckIfEnvSet checks to see if env var and dir exists
