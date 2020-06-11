@@ -9,3 +9,8 @@ i3/config, .i3/config
 i3/i3status.conf, .i3/i3status.conf
 vscode/keybindings.json, .config/Code/User/keybindings.json
 vscode/settings.json, .config/Code/User/settings.json
+bash_completions/*, ~/.completions/
+terminator/config, ~/.config/terminator/config
+vim/plugins, ~/.vim/pack/
+vim/colors, ~/.vim/
+tmux-dir/plugins, ~/.tmux/
