@@ -1,2 +1,11 @@
-bashrc, /home/json/.bashrc
-bash_profile, /home/json/bash_profile
+bashrc, .bashrc
+bash_profile, .bash_profile
+git/gitconfig, .gitconfig
+ranger, .config/
+tmux, .tmux.conf
+vimrc, .vimrc
+i3/xinitrc, .xinitrc
+i3/config, .i3/config
+i3/i3status.conf, .i3/i3status.conf
+vscode/keybindings.json, .config/Code/User/keybindings.json
+vscode/settings.json, .config/Code/User/settings.json
