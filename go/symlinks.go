@@ -24,8 +24,9 @@ func init() {
 func main() {
 	dotfiles := CheckIfEnvSet("DOTFILES")
 	// environment := CheckIfEnvSet("ENVIRONMENT")
+	home := CheckIfEnvSet("HOME")
 
-	PopulateSymlink("files.csv", dotfiles)
+	PopulateSymlink("files.csv", home, dotfiles)
 	// PopulateSymlink("dir.csv", environment)
 }
 
@@ -48,7 +49,7 @@ func CheckIfFileExists(file string) {
 }
 
 // PopulateSymlink uses a .csv file in the same dir to populate symlinks
-func PopulateSymlink(file, envvar string) {
+func PopulateSymlink(file, home, envvar string) {
 	CheckIfFileExists(file)
 
 	csvFile, _ := os.Open(file)
@@ -64,7 +65,7 @@ func PopulateSymlink(file, envvar string) {
 		}
 
 		target := envvar + "/" + line[0]
-		link := strings.TrimSpace(line[1])
+		link := home + "/" + strings.TrimSpace(line[1])
 
 		CreateSymlink(target, link)
 	}
