@@ -21,7 +21,7 @@ func main() {
 
 	ping.AddIPAddr(resolve)
 	ping.OnRecv = func(address *net.IPAddr, rtt time.Duration) {
-		fmt.Printf("IP Addr: %s receive, RTT: %v\n", address.String(), rtt)
+		fmt.Println(rtt)
 	}
 	ping.OnIdle = func() {
 		fmt.Println("finish")
