@@ -1,12 +1,12 @@
 FROM golang:latest as builder
 RUN mkdir /build
-ADD main.go /build/
+ADD ping.go /build/
 RUN go get -u github.com/tatsushid/go-fastping
 WORKDIR /build
 
-RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -ldflags '-extldflags "-static"' -o main .
+RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -ldflags '-extldflags "-static"' -o ping.
 
 FROM golang:alpine
-COPY --from=builder /build/main /app/
+COPY --from=builder /build/ping /app/
 WORKDIR /app
-CMD ["./main", "1.1.1.1"]
+CMD ["./ping", "1.1.1.1"]
