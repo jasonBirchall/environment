@@ -1,5 +1,5 @@
 IMAGE := json0/ping
-TAG := 1.2
+TAG := 1.3
 
 .PHONY: build
 build: clean ping-build
@@ -9,13 +9,17 @@ clean:
 	go clean
 
 ping-build:
-	go build main.go
+	go build ping.go
 
 .built-image: Dockerfile
-	docker build -t $(IMAGE) .
 	touch .built-image
 
-push: .built-image
+docker-build: .built-image
+	docker build -t $(IMAGE) .
+	docker tag $(IMAGE) $(IMAGE):$(TAG)
+
+docker-push: .built-image
+	docker build -t $(IMAGE) .
 	docker tag $(IMAGE) $(IMAGE):$(TAG)
 	docker push $(IMAGE):$(TAG)
 
