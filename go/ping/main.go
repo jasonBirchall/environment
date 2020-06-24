@@ -1,4 +1,4 @@
-package ping
+package main
 
 import (
 	"fmt"
@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	doEvery(20*time.Millisecond, ping)
+	doEvery(50*time.Millisecond, ping)
 }
 
 // Idea taken from https://gist.github.com/ryanfitz/4191392

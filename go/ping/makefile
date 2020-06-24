@@ -16,12 +16,16 @@ ping-build:
 
 docker-build: .built-image
 	docker build -t $(IMAGE) .
-	docker tag $(IMAGE) $(IMAGE):$(TAG)
 
 docker-push: .built-image
 	docker build -t $(IMAGE) .
 	docker tag $(IMAGE) $(IMAGE):$(TAG)
 	docker push $(IMAGE):$(TAG)
 
+shell:
+	docker build -t $(IMAGE):$(TAG) .
+	docker run -it --rm $(IMAGE):$(TAG) sh
+
 run:
+	docker build -t $(IMAGE):$(TAG) .
 	docker run $(IMAGE):$(TAG)
