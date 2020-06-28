@@ -41,6 +41,7 @@
         - netcat
         - nethogs
         - neofetch # Gives you a prompt for screenshot
+        - neovim 
         - nmap
         - nodejs
         - openvpn
