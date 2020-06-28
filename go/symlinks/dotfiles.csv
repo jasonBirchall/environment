@@ -7,6 +7,7 @@ git/gitconfig, .gitconfig
 ranger, .config/
 tmux, .tmux.conf
 vimrc, .vimrc
+nvim/init.vim, .config/nvim/init.vim
 i3/xinitrc, .xinitrc
 i3/config, .i3/config
 i3/i3status.conf, .i3/i3status.conf
