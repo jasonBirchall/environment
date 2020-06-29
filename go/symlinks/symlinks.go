@@ -1,4 +1,3 @@
-// TODO: Separate csv files into purpose, e.g. $HOME or $CONFIG, perhaps use env vars.
 package main
 
 import (
@@ -77,6 +76,7 @@ func CreateSymlink(target, link string) {
 		fmt.Println("Skipping:", link, "already exists")
 	} else {
 		err := os.Symlink(target, link)
+		fmt.Println("Creating:", link)
 		if err != nil {
 			fmt.Println(err)
 			os.Exit(1)
