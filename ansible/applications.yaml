@@ -67,6 +67,7 @@
         - xclip # install to copy out of tmux
         - xinit # allows a user to manually start an xorg display server
         - yarn
+        - zsh
 
     - name: Install snaps
       snap:
