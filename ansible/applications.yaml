@@ -25,6 +25,7 @@
         - curl
         - cifs-utils
         - feh
+        - fonts-powerline
         - fortune # fortune at the top of your terminal
         - git
         - git-crypt
