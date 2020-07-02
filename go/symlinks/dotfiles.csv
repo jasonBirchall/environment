@@ -1,7 +1,8 @@
 bashrc, .bashrc
 zsh/zshrc, .config/zsh/.zshrc
 zsh/zprofile, .config/zsh/.zprofile
-zsh/zshenv, .zshenv
+zsh/zshenv, .config/zsh/.zshenv
+zsh/aliases, .config/zsh/.aliases
 bash_profile, .bash_profile
 git/gitconfig, .gitconfig
 ranger, .config/
