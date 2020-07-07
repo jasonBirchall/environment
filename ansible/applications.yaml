@@ -29,6 +29,7 @@
         - fortune # fortune at the top of your terminal
         - git
         - git-crypt
+        - git-cola # gui for slicing git commits
         - go-dep # go dependency manager
         - i3 # window manager
         - i3lock # lock for i3
