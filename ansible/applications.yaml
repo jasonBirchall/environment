@@ -84,6 +84,7 @@
           - intellij-idea-community
           - ncspot
           - spotify
+          - zoom
 
     - name: Install snaps with option --classic
       snap:
