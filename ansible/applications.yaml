@@ -61,6 +61,7 @@
         - telnet
         - terminator
         - tmux
+        - ubuntu-drivers
         - vim
         - vim-gnome
         - virtualbox
