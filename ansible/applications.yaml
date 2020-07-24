@@ -84,8 +84,9 @@
           - gotop # CPU, MEM, Net monitoring tool
           - intellij-idea-community
           - ncspot
+          - postman
           - spotify
-          - zoom
+          - zoom-client
 
     - name: Install snaps with option --classic
       snap:
