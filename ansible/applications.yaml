@@ -14,6 +14,7 @@
       vars:
         packages:
         - ack-grep
+        - silversearcher-ag # similar to ack but can be used in vim
         - ansible
         - apache2-utils # tools like htpassword etc
         - apt-transport-https # helpful to have
@@ -63,6 +64,7 @@
         - terminator
         - tmux
         - tree # nice way to view dir structure
+        - ubuntu-drivers-common
         - vim
         - vim-gnome
         - virtualbox
@@ -85,8 +87,9 @@
           - gotop # CPU, MEM, Net monitoring tool
           - intellij-idea-community
           - ncspot
+          - postman
           - spotify
-          - zoom
+          - zoom-client
 
     - name: Install snaps with option --classic
       snap:
