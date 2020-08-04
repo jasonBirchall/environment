@@ -48,6 +48,7 @@
         - nodejs
         - openvpn
         - pavucontrol
+        - polybar
         - ranger
         - ruby-all-dev
         - shellcheck
@@ -61,6 +62,7 @@
         - telnet
         - terminator
         - tmux
+        - tree # nice way to view dir structure
         - vim
         - vim-gnome
         - virtualbox
