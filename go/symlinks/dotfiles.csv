@@ -13,6 +13,8 @@ nvim/coc-settings.json, .config/nvim/coc-settings.json
 i3/xinitrc, .config/i3/xinitrc
 i3/config, .config/i3/config
 i3/i3status.conf, .config/i3/i3status.conf
+i3/polybar/config, .config/polybar/config
+i3/polybar/launcher.sh, .config/polybar/launcher.sh
 vscode/keybindings.json, .config/Code/User/keybindings.json
 vscode/settings.json, .config/Code/User/settings.json
 bash_completions/*, .completions/
