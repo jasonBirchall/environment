@@ -49,9 +49,11 @@
         - nodejs
         - openvpn
         - pavucontrol
+        - playerctl
         - polybar
         - ranger
         - ruby-all-dev
+        - rofi
         - shellcheck
         - smartmontools
         - snap
