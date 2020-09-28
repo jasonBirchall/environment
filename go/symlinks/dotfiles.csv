@@ -11,6 +11,7 @@ vimrc, .vimrc
 nvim/init.vim, .config/nvim/init.vim
 nvim/coc-settings.json, .config/nvim/coc-settings.json
 i3, .config/i3
+i3/polybar, .config/polybar
 vscode/keybindings.json, .config/Code/User/keybindings.json
 vscode/settings.json, .config/Code/User/settings.json
 bash_completions/*, .completions/
