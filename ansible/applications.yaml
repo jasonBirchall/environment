@@ -51,6 +51,7 @@
         - pavucontrol
         - polybar
         - ranger
+        - rofi # i3 app launcher
         - ruby-all-dev
         - shellcheck
         - smartmontools
