@@ -1,0 +1,12 @@
+# https://docs.ansible.com/ansible/latest/modules/apt_repository_module.html
+-
+  name: Ubuntu sources
+  hosts: localhost
+  become: yes
+
+  tasks:
+    - name: focal fossa
+      apt_repository:
+        repo: deb http://archive.canonical.com/ubuntu focal partner
+        state: present
+
