@@ -52,6 +52,7 @@
         - playerctl
         - polybar
         - ranger
+        - rofi # i3 app launcher
         - ruby-all-dev
         - rofi
         - shellcheck
