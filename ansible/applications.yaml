@@ -25,6 +25,7 @@
         - cbm # colour bandwidth monitor
         - curl
         - cifs-utils
+        - dunst
         - feh
         - fonts-powerline
         - fortune # fortune at the top of your terminal

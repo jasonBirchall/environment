@@ -20,3 +20,5 @@ vim/plugins, .vim/pack/
 vim/colors, .vim/
 tmux-dir/plugins, .tmux/
 alacritty, .config/alacritty
+wallpaper/wallpaper1.png, Pictures/wallpaper1.png
+i3/dunstrc, .config/dunst/dunstrc
