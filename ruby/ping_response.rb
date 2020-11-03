@@ -7,7 +7,7 @@ def ping_host()
   if cmd.empty?
     puts "No signal"
   else
-    puts "#{cmd}"
+    puts "ping: #{cmd}"
   end
 end
 
