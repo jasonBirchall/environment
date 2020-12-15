@@ -27,6 +27,7 @@
         - cifs-utils
         - dunst
         - feh
+        - flameshot # screenshot tool
         - fonts-powerline
         - fortune # fortune at the top of your terminal
         - git
