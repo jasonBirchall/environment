@@ -72,6 +72,7 @@
         - tree # nice way to view dir structure
         - ubuntu-drivers-common
         - vim
+        - vifm
         - vim-gnome
         - virtualbox
         - vlc
