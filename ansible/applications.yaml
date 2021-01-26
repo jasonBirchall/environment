@@ -25,7 +25,7 @@
         - cbm # colour bandwidth monitor
         - curl
         - cifs-utils
-        - dunst
+        - dunst # notifications for i3wm
         - feh
         - flameshot # screenshot tool
         - fonts-powerline
@@ -87,6 +87,8 @@
         name:
           - core
           - core18
+          - core20
+          - crypto # cryptocurrency tracker
           - discord
           - docker
           - electronplayer # netflix player
