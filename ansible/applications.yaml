@@ -31,6 +31,7 @@
         - flameshot # screenshot tool
         - fonts-powerline
         - fortune # fortune at the top of your terminal
+        - fzf # https://github.com/junegunn/fzf#using-linux-package-managers
         - git
         - git-crypt
         - git-cola # gui for slicing git commits
