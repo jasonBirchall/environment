@@ -48,7 +48,7 @@
         - netcat
         - nethogs
         - neofetch # Gives you a prompt for screenshot
-        - neovim 
+        - neovim
         - nmap
         - nodejs
         - openvpn
@@ -108,16 +108,12 @@
       snap:
         name:
           - ab
-          - code
-          - go
-          - helm
           - hub
-          - kubectl
           - ruby
           - rubymine
           - slack
         classic: yes
-    
+
     - name: Remove dependencies that are no longer required
       apt:
         autoremove: yes
